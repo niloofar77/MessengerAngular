@@ -4,16 +4,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';  
 import { MatIconModule } from '@angular/material/icon';  
-import { MatCardModule } from '@angular/material/card'; 
+import { MatCardModule } from '@angular/material/card';
+import { MatDivider } from "@angular/material/divider"; 
 
 @Component({
   selector: 'app-users',
   imports: [CommonModule,
-     MatInputModule,
+    MatInputModule,
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule],
+    MatCardModule, MatDivider],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })
@@ -21,20 +22,36 @@ export class UsersComponent {
   users  = [
     {
       name: 'John Doe',
-      avatar: 'https://www.w3schools.com/w3images/avatar2.png'
+      url: 'assets/images/avatar1.jpg',
+      description:"t1"
     },
     {
       name: 'Jane Smith',
-      avatar: 'https://www.w3schools.com/w3images/avatar5.png'
+      url: 'assets/images/avatar1.jpg',
+       description:"t2"
     },
     {
       name: 'Michael Johnson',
-      avatar: 'https://www.w3schools.com/w3images/avatar4.png'
+      url: 'assets/images/avatar1.jpg',
+       description:"t3"
     },
     {
       name: 'Emily Davis',
-      avatar: 'https://www.w3schools.com/w3images/avatar6.png'
-    }
+      url: 'assets/images/avatar1.jpg',
+       description:"t4"
+    },
+    {
+      name: 'John Doe',
+      url: 'assets/images/avatar1.jpg',
+       description:"t5"
+    },
+    {
+      name: 'Jane Smith',
+      url: 'assets/images/avatar1.jpg',
+       description:"t6"
+    },
+ 
+  
   ];
 }
 

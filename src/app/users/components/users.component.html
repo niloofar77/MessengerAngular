@@ -1,15 +1,22 @@
-<div *ngFor="let user of users">
-    <mat-card class="user-card">
-      <mat-card-header>
-        <div mat-card-avatar class="avatar">
-          <img [src]="user.avatar" alt="Avatar" />
+<div class="chat-wrapper">
+  <div class="chat-container">
+    <mat-toolbar class="toolbar">
+      <div class="custom">
+        <mat-icon>arrow_back</mat-icon>
+        <span>All Chats</span>
+      </div>
+    </mat-toolbar>
+    <mat-divider></mat-divider>
+
+    <div *ngFor="let user of users">
+      <div class="user-card">
+        <div class="user-details">
+          <div class="user-name">{{ user.name }}</div>
+          <p class="user-description">{{ user.description || 'No description available' }}</p>
         </div>
-        <mat-card-title>{{ user.name }}</mat-card-title>
-      </mat-card-header>
-  
-      <mat-card-actions>
-        <button mat-button>send message</button>
-      </mat-card-actions>
-    </mat-card>
+        <img [src]="user.url" alt="Avatar" class="avatar" />
+      </div>
+      <mat-divider class="divider1"></mat-divider>
+    </div>
   </div>
-  
+</div>

@@ -1,26 +1,42 @@
-<mat-toolbar color="primary">
-    <mat-icon>chat</mat-icon>
-    <span>Chat App</span>
-    <div class="spacer"></div>
-    <mat-icon  (click)="goUsersPage()">search</mat-icon>
-  </mat-toolbar>
-  
+
+<div class="chat-wrapper">
   <div class="chat-container">
+    <mat-toolbar>
+      <div class="custom">
+        <mat-icon (click)="goUsersPage()">arrow_back</mat-icon>
+        <span>name</span>
+        <img src="assets/images/avatar1.jpg" alt="avatar" class="my-avatar" /> 
+      </div>
+      
+    
+
+    </mat-toolbar>
+    <mat-divider></mat-divider>
     <div class="chat-list">
-      <mat-card *ngFor="let message of messages" class="chat-card">
-        <div class="message-header">
-          <span class="user-name">{{ message.sender }}</span>
-          <span class="message-time">{{ message.time }}</span>
-        </div>
+      <mat-card
+        *ngFor="let message of messages"
+        [ngClass]="{'sent': message.sender === 'You', 'received': message.sender !== 'You'}"
+        class="chat-card"
+      >
         <div class="message-body">
           <p>{{ message.text }}</p>
+          <span class="message-time">{{ message.time }}</span>
         </div>
       </mat-card>
     </div>
-  
+
+
     <div class="message-input">
-      <input matInput [(ngModel)]="newMessage" placeholder="Type a message" />
-      <button mat-raised-button color="primary" (click)="sendMessage()">Send</button>
+      <input
+        matInput
+        [(ngModel)]="newMessage"
+        placeholder="Type a message"
+        class="message-field"
+        (keyup.enter)="sendMessage()"
+      />
+      <button mat-icon-button color="primary" (click)="sendMessage()">
+        <mat-icon>send</mat-icon>
+      </button>
     </div>
   </div>
-  
+</div>

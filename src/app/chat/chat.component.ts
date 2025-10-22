@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ChatService } from '../chat.service';
 import { MatToolbarModule } from '@angular/material/toolbar';  
+import {MatDividerModule} from '@angular/material/divider';
 
 import { MatIconModule } from '@angular/material/icon';  
 import { MatCardModule } from '@angular/material/card'; 
@@ -19,7 +20,9 @@ import { Router } from '@angular/router';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule
+    
     
   ],
   templateUrl: './chat.component.html',
