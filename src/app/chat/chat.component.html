@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+    <mat-icon>chat</mat-icon>
+    <span>Chat App</span>
+    <div class="spacer"></div>
+    <mat-icon  (click)="goUsersPage()">search</mat-icon>
+  </mat-toolbar>
+  
+  <div class="chat-container">
+    <div class="chat-list">
+      <mat-card *ngFor="let message of messages" class="chat-card">
+        <div class="message-header">
+          <span class="user-name">{{ message.sender }}</span>
+          <span class="message-time">{{ message.time }}</span>
+        </div>
+        <div class="message-body">
+          <p>{{ message.text }}</p>
+        </div>
+      </mat-card>
+    </div>
+  
+    <div class="message-input">
+      <input matInput [(ngModel)]="newMessage" placeholder="Type a message" />
+      <button mat-raised-button color="primary" (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+  

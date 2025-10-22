@@ -1,0 +1,63 @@
+/* تنظیمات کلی */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .chat-list {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .chat-card {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .message-body {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .message-input {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message-input input {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  .message-input button {
+    align-self: center;
+  }
+  
+  mat-toolbar {
+    padding: 0 15px;
+    background-color: #00796b;
+    color: white;
+  }
+  
+  mat-icon {
+    margin-right: 10px;
+  }
+  
+  .spacer {
+    flex-grow: 1;
+  }
+  
