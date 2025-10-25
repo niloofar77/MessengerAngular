@@ -1,0 +1,38 @@
+.containerMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    height: 48px;
+    width: 100%;
+    z-index: 100;
+}
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  
+}
+.flexContainer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  
+}
+
+
+.flexContainer img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+.flexContainer p {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0;
+}

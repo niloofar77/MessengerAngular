@@ -10,6 +10,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';  
 import { MatCardModule } from '@angular/material/card'; 
 import { Router } from '@angular/router';
+import { MainComponent } from '../layout/main';
 @Component({
   selector: 'app-chat',
   standalone: true,
@@ -21,7 +22,8 @@ import { Router } from '@angular/router';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    
     
     
   ],

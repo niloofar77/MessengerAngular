@@ -6,6 +6,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';  
 import { MatCardModule } from '@angular/material/card';
 import { MatDivider } from "@angular/material/divider"; 
+import { Router } from '@angular/router';
+import { MainComponent } from "../../layout/main";
+
 
 @Component({
   selector: 'app-users',
@@ -14,11 +17,14 @@ import { MatDivider } from "@angular/material/divider";
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule, MatDivider],
+    MatCardModule, MatDivider, MainComponent],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })
 export class UsersComponent {
+
+  
+  constructor(private router:Router) {}
   users  = [
     {
       name: 'John Doe',
@@ -50,9 +56,12 @@ export class UsersComponent {
       url: 'assets/images/avatar1.jpg',
        description:"t6"
     },
- 
+
   
   ];
+  goChatPage(){
+    this.router.navigate(["/"])
+  }
 }
 
 

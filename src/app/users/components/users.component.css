@@ -1,10 +1,4 @@
-.chat-wrapper {
-  display: flex;
-  justify-content: center;
-  background-color: #f7f9fc;
-  height: calc(100vh - 64px);
-  padding: 20px;
-}
+
 
 .chat-container {
   width: 380px;
@@ -43,10 +37,7 @@
   margin: 8px 0;
 }
 
-.user-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+
 
 .avatar {
   width: 48px;
@@ -59,7 +50,7 @@
 .user-details {
   display: flex;
   flex-direction: column;
-  text-align: right;
+  text-align: left;
   margin-left: 15px;
   flex: 1;
 }
@@ -97,4 +88,8 @@ mat-icon {
 
 mat-icon:hover {
   transform: scale(1.1);
+}
+
+.dividerCustom {
+  border-top: 1px solid #ddd;
 }

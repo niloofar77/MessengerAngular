@@ -1,22 +1,24 @@
-<div class="chat-wrapper">
-  <div class="chat-container">
+
+  <div>
     <mat-toolbar class="toolbar">
       <div class="custom">
-        <mat-icon>arrow_back</mat-icon>
+        <mat-icon  (click)="goChatPage()">arrow_back</mat-icon>
         <span>All Chats</span>
       </div>
     </mat-toolbar>
-    <mat-divider></mat-divider>
-
+    <mat-divider class="dividerCustom"></mat-divider>
+  
     <div *ngFor="let user of users">
       <div class="user-card">
+        <img [src]="user.url" alt="Avatar" class="avatar" />
         <div class="user-details">
           <div class="user-name">{{ user.name }}</div>
           <p class="user-description">{{ user.description || 'No description available' }}</p>
         </div>
-        <img [src]="user.url" alt="Avatar" class="avatar" />
+       
       </div>
-      <mat-divider class="divider1"></mat-divider>
-    </div>
+      <mat-divider class="dividerCustom"></mat-divider>    </div>
   </div>
-</div>
+
+
+
