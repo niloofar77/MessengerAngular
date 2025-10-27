@@ -11,7 +11,7 @@ export class BottomBarComponent {
   constructor( private router:Router){
 
   }
-  goSettings(){
+  goHome(){
     this.router.navigate([""])
   }
   goUsers(){
@@ -20,5 +20,7 @@ export class BottomBarComponent {
   goChats(){
     this.router.navigate(["chats"])
   }
-
+  goSettings(){
+    this.router.navigate(["settings"])
+  }
 }

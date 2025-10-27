@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { UsersComponent } from './users/components/users.component';
 import { ChatComponent } from './chat/chat.component';
 import { MainComponent } from './layout/main';
+import { SettingsComponent } from './settings/settings.component';
 
 export const routes: Routes = [
 {
@@ -16,7 +17,10 @@ export const routes: Routes = [
         },
         {
             path:"users",component:UsersComponent
-        }
+        },
+        {
+            path:"settings",component:SettingsComponent
+        },
     ]
 }
     

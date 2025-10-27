@@ -9,7 +9,7 @@
     <mat-divider class="dividerCustom"></mat-divider>
   
     <div *ngFor="let user of users">
-      <div class="user-card">
+      <div class="user-card" (click)="goChatPage()">
         <img [src]="user.url" alt="Avatar" class="avatar" />
         <div class="user-details">
           <div class="user-name">{{ user.name }}</div>
